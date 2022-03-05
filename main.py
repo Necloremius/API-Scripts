@@ -3,7 +3,7 @@ import requests
 zipcode = input("Enter in your zip code nerd: ")
 response = requests.get(f"http://api.weatherapi.com/v1/current.json?key=*redacted*&q={zipcode}").json()
 
-print(f"""Current Weather:
+print(f"""\n--------------------------------------------------------\nCurrent Weather:
 
 Time last updated: {response["current"]["last_updated"]}
 Temperature (Celsius): {response["current"]["temp_c"]}
